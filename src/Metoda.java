@@ -5,12 +5,17 @@ public class Metoda {
 
     private static int suma(int tab[][]) {
 
-        int wynik = tab[0][0] + tab[0][1] + tab[0][2] + tab[1][0] + tab[1][1] + tab[1][2];
+        int wynik = 0;
+        for (int[] i : tab) {
+            for (int z : i) {
+                wynik += z;
+            }
+        }
         return wynik;
     }
 
     public static void main(String[] args) {
-        int[][] tab = new int[][]{new int[]{1,2,3},new int[]{4,5,6}};
+        int[][] tab = new int[][]{new int[]{1, 2, 3}, new int[]{4, 5, 6}};
 
         System.out.println(suma(tab));
     }
